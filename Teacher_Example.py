@@ -15,6 +15,7 @@ isnominate: -1
 haslastm: false
 rank: 6"""
 
+
 data = {r.split(': ')[0] : r.split(': ') for r in data_str.split('\n')}
 
 res =requests.post(url, headers=headers, data=data)
@@ -29,3 +30,4 @@ for i in range(0,5) :
     print(json_data['data']['list'][0]['cnname'])
     print('gade:', json_data['data']['list'][0]['grade'])
     print('=================================================================================')
+    print('End')
